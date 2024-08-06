@@ -9,7 +9,7 @@ const config = {
     title: 'sero',
     tagline: "Lightning-fast static web publishing",
     url: "https://clowzed.github.io/",
-    baseUrl: "/build",
+    baseUrl: "/sero-docs/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
@@ -19,8 +19,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "clowzed", // Usually your GitHub org/user name.
-  projectName: "serodocs", // Usually your repo name.
-
+  projectName: "sero-docs", // Usually your repo name.
   presets: [
     [
       "classic",
