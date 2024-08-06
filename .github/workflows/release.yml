@@ -1,0 +1,33 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install Yarn
+        run: npm install --global yarn
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Fetch openapi.json
+        run: |
+          curl -L -o openapi.json https://raw.githubusercontent.com/clowzed/sero/master/openapi.json
+
+      - name: Generate API Docs
+        run: yarn docusaurus gen-api-docs all
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.G_TOKEN }}
+          publish_dir: ./build
