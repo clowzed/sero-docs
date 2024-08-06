@@ -51,7 +51,7 @@ const config = {
       navbar: {
         title: "sero",
         logo: {
-          src: "img/logo.svg",
+          src: "./static/img/logo.svg",
         },
         items: [
           {
