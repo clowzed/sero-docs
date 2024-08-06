@@ -19,15 +19,15 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Build static
-        run: yarn build
-
       - name: Fetch openapi.json
         run: |
           curl -L -o openapi.json https://raw.githubusercontent.com/clowzed/sero/master/openapi.json
 
       - name: Generate API Docs
         run: yarn docusaurus gen-api-docs all
+
+      - name: Build static
+        run: yarn build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
