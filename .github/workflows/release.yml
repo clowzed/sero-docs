@@ -19,6 +19,9 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
+      - name: Build static
+        run: yarn build
+
       - name: Fetch openapi.json
         run: |
           curl -L -o openapi.json https://raw.githubusercontent.com/clowzed/sero/master/openapi.json
