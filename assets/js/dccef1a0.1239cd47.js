@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksero_docs_v_3=self.webpackChunksero_docs_v_3||[]).push([[935],{42743:e=>{e.exports=JSON.parse('{"title":"OpenAPI","description":"Sero OpenAPI reference","slug":"/category/sero","permalink":"/sero-docs/docs/category/sero","navigation":{"next":{"title":"Introduction","permalink":"/sero-docs/docs/OpenAPI/sero"}}}')}}]);
